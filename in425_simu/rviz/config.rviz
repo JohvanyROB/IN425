@@ -55,7 +55,7 @@ Visualization Manager:
       Name: Map
       Topic:
         Depth: 5
-        Durability Policy: Volatile
+        Durability Policy: Transient Local
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
@@ -85,8 +85,6 @@ Visualization Manager:
           Value: false
         map:
           Value: false
-        odom:
-          Value: true
         right_wheel:
           Value: false
       Marker Scale: 1
@@ -96,17 +94,16 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
-          odom:
-            base_footprint:
-              base_link:
-                front_wheel:
-                  {}
-                left_wheel:
-                  {}
-                lidar_link:
-                  {}
-                right_wheel:
-                  {}
+          base_footprint:
+            base_link:
+              front_wheel:
+                {}
+              left_wheel:
+                {}
+              lidar_link:
+                {}
+              right_wheel:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
