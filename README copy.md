@@ -13,5 +13,5 @@ cd ~/ros2_ws/src/IN425 && ./install_galactic.sh && source ~/.bashrc
 
 ## Compile the project
 ```bash
-cd ~/ros2_ws/src/IN425 && ./install_dependencies.sh && source ~/ros2_ws/install/setup.bash
+cd ~/ros2_ws/src/IN425 && sudo chmod+x install_dependencies.sh && ./install_dependencies.sh && source ~/ros2_ws/install/setup.bash
 ```
