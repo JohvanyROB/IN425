@@ -53,7 +53,12 @@ def generate_launch_description():
 
     return LaunchDescription([
         start_world_launch,
-        spawn_robot_launch,
+        TimerAction(
+           period = 5.0,
+           actions = [
+                spawn_robot_launch
+           ]
+        ),
         map_server_node,
         activate_map_server_cmd,
         rviz_node,

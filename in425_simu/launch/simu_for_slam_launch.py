@@ -4,7 +4,7 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch_ros.actions import Node
 
 def generate_launch_description():
@@ -36,7 +36,12 @@ def generate_launch_description():
 
     return LaunchDescription([
         start_world_launch,
-        spawn_robot_launch,
+        TimerAction(
+           period = 5.0,
+           actions = [
+                spawn_robot_launch
+           ]
+        ),
         slam_launch,
         rviz_node
     ])
